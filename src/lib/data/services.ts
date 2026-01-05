@@ -1,14 +1,36 @@
-export const services = [
+export type ServiceCategory = 'carbon' | 'water' | 'energy';
+
+export type Service = {
+  id: string;
+  name: string;
+  category: ServiceCategory;
+  impactScore: number;
+  description: string;
+};
+
+export const services: Service[] = [
   {
-    id: 1,
-    name: "Service 1",
-    description: "This is service 1",
-    price: 100,
+    id: 'carbon-offset',
+    name: 'Carbon Offset Program',
+    category: 'carbon',
+    impactScore: 85,
+    description:
+      'Helps organizations offset carbon emissions through verified environmental projects.',
   },
   {
-    id: 2,
-    name: "Service 2",
-    description: "This is service 2",
-    price: 200,
+    id: 'water-restoration',
+    name: 'Water Restoration Initiative',
+    category: 'water',
+    impactScore: 72,
+    description:
+      'Focuses on restoring water ecosystems and improving water sustainability.',
+  },
+  {
+    id: 'renewable-energy',
+    name: 'Renewable Energy Adoption',
+    category: 'energy',
+    impactScore: 90,
+    description:
+      'Supports transition to renewable energy sources for long-term impact.',
   },
 ];
