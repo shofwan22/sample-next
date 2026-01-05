@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## SystemEarth Frontend Sample
 
-## Getting Started
+This project is a simplified frontend sample inspired by SystemEarth’s public product.
 
-First, run the development server:
+### Goals
+- Demonstrate frontend architecture and decision-making
+- Keep scope intentionally limited for focused code review
+- Prioritize clarity over feature completeness
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Tech Stack
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Key Decisions
+- Feature-based folder structure
+- No global state (scope does not justify it)
+- Derived state via memoized hooks
+- Pure utility functions for business logic
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Trade-offs
+- No backend or authentication
+- No persistence
+- Minimal UI polish
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+These decisions were made intentionally to keep the discussion focused on core frontend reasoning.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### What I Would Improve in Production
+- Server-side data fetching
+- Accessibility enhancements
+- Automated testing
+- Performance profiling for large datasets
